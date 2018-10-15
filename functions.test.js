@@ -1,6 +1,33 @@
 //const functions = require('./functions');
 import functions from './functions.js';
 
+//beforeEach(() => initDatabase());
+//afterEach(() => closeDatabase());
+
+//beforeAll(() => initDatabase());
+//afterAll(() => closeDatabase());
+
+//const initDatabase = () => console.log('database initialized..');
+//const closeDatabase = () => console.log('database closed..');
+
+
+describe('Checking Names', () => {
+
+    const nameCheck = () => console.log('checking name..');
+
+    beforeEach(() => nameCheck());
+
+    test('user is Jeff', () => {
+        const user = 'Jeff';
+        expect(user).toBe('Jeff');
+    });
+
+    test('user is Karen', () => {
+        const user = 'Karen';
+        expect(user).toBe('Karen');
+    });
+});
+
 //toBe() - it is for primitive types
 it(`Adds 2 + 2 to equal 4`, () => {
     expect(functions.add(2, 2)).toBe(4);
